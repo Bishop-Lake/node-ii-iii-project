@@ -13,6 +13,11 @@ order by o.orderdate desc
 
 ### Display all ProductNames and Quantities placed on order 10251. Sort by ProductName. Shows 3 records.
 
+SELECT od.orderid, p.productname, od.quantity FROM [OrderDetails] as od 
+inner join products as p on od.productid = p.productid
+where orderid = 10251
+order by p.productname
+
 ### Display the OrderID, CustomerName and the employee's LastName for every order. All columns should be labeled clearly. Displays 196 records.
 
 ### (Stretch)  Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 9 records.
