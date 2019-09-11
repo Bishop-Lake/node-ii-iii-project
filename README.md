@@ -27,14 +27,14 @@ Visit [SQL Try Editor at W3Schools.com](https://www.w3schools.com/Sql/tryit.asp?
 
 Write helpers methods in `./schemes/scheme-model.js` that match the following specifications:
 
-- `find()`:
+- `find()`:✔
   - Calling find returns a promise that resolves to an array of all schemes in the database.
   - No steps are included.
-- `findById(id)`:
+- `findById(id)`:✔✔
   - Expects a scheme `id` as its only parameter.
   - Resolve to a single scheme object.
   - On an invalid `id`, resolves to `null`.
-- `findSteps(id)`:
+- `findSteps(id)`:✔
   - Expects a scheme `id`.
   - Resolves to an array of all correctly ordered step for the given scheme: `[ { id: 17, scheme_name: 'Find the Holy Grail', step_number: 1, instructions: 'quest'}, { id: 18, scheme_name: 'Find the Holy Grail', step_number: 2, instructions: '...and quest'}, etc. ]`.
   - This array should include the `scheme_name` _not_ the `scheme_id`.

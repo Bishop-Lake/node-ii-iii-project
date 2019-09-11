@@ -4,6 +4,7 @@ module.exports = {
     find,
     findById,
     findSteps,
+    add
 }
 
 function find() {
@@ -38,4 +39,13 @@ function findSteps(id) {
                 return steps
             }
         })
+}
+
+function add(scheme) {
+    if (!scheme) {
+        return null
+    } else {
+    return db('schemes')
+        .insert(scheme, ['id', 'scheme_name'])
+    }
 }
